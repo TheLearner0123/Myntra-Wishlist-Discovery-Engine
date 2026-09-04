@@ -1,0 +1,167 @@
+[
+  {
+    "review_id": "1a3860bd-38cc-45c0-b4aa-5babda384854",
+    "author": "Manisha Hembrom",
+    "rating": 1,
+    "text": "⭐ 1/5 Very disappointing experience. I requested an exchange due to a fitting issue, but as I was not available at home during pickup, the exchange was cancelled. Now I’m stuck with the old product despite the fitting issue. Customer care is also not helping—no proper response on call or chat. Very poor service. I won’t be using this app again. I will rate zero",
+    "app_version": "4.2607.32",
+    "country": "in",
+    "category": "Apparel",
+    "inferred_cluster": "Fit & Sizing Anxiety",
+    "intent_friction": "Exchange/Return Dread preventing future purchases"
+  },
+  {
+    "review_id": "e9b35418-f88f-41cd-8652-353feecfacd2",
+    "author": "SΛLIF",
+    "rating": 1,
+    "text": "Too Much AI Slop! Small Brands that make poor quality clothing are posting unrealistic images of their products and it turns out to be nothing like the picture in reality. It's hurting Myntra as a brand because I've stopped buying from such Fraud Companies.",
+    "app_version": "4.2608.20",
+    "country": "in",
+    "category": "Dresses & Tops",
+    "inferred_cluster": "Fabric & Sensory Ambiguity",
+    "intent_friction": "Model/Studio image vs Real-world discrepancy"
+  },
+  {
+    "review_id": "b41c3fab-a3f5-4944-84bd-d57a27b9f23e",
+    "author": "Dr. Sameer Sood",
+    "rating": 5,
+    "text": "I recently ordered a formal shirt from Myntra, and it exceeded my expectations. The fabric quality is top-notch—soft, breathable, and premium to touch. The fit is true to size, giving a clean, tailored look, while the color matches the product photos online. Stitching and details are well-crafted with no loose threads. It handles washing well without shrinking or fading. Myntra's delivery was fast, and the packaging kept everything in perfect shape. Great",
+    "app_version": "4.2608.20",
+    "country": "in",
+    "category": "Tops & Shirts",
+    "inferred_cluster": "Verified Quality Drivers",
+    "intent_friction": "Positive benchmark for fabric breathability & true-to-size fit"
+  },
+  {
+    "review_id": "29ce8004-9c12-4321-9b05-ca2c5dfeb419",
+    "author": "Informative",
+    "rating": 3,
+    "text": "the product looks good but the quality is not good, fabric is too stretchable",
+    "app_version": "4.2607.32",
+    "country": "in",
+    "category": "Apparel",
+    "inferred_cluster": "Fabric & Sensory Ambiguity",
+    "intent_friction": "Fabric stretch & elasticity uncertainty"
+  },
+  {
+    "review_id": "5dcd43df-a6b1-4693-b85e-758ea362d354",
+    "author": "Tanvi jain",
+    "rating": 1,
+    "text": "myntra has no customer grievance policy. I have ordered a product and it has been sent by vendor without brand tag. And now delivery man has refused to take the return parcel coz of missing brand tag..i tried to contact customer care but it's call is going on waiting only and no return call recieved...what should I do now. how do I return my parcel.",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Ethnic / Western",
+    "inferred_cluster": "Return Policy & Logistics Dread",
+    "intent_friction": "Fear of courier rejection & tag disputes"
+  },
+  {
+    "review_id": "715e0e4e-9e22-4550-aa2c-612608c8243e",
+    "author": "Mudassar Thakor",
+    "rating": 2,
+    "text": "Extremely disappointed with the purchase. Instead of the color I selected, I was sent a completely different color that isn't even listed on the product page.",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Apparel",
+    "inferred_cluster": "Color & Visual Accuracy",
+    "intent_friction": "Color fidelity and daylight accuracy discrepancy"
+  },
+  {
+    "review_id": "819d7e26-3c9f-40cd-bb1f-f34b39071e2d",
+    "author": "Pranati Hota",
+    "rating": 2,
+    "text": "About the quality of products it's amazing but if you have to return or replace the product it's a nuisance. I had to replace the product due to it being small in size but it failed the quality check because there were the tags but the logo was not given there which is totally their fault but who suffers? it's me. I never expected this from myntra and I'm really disappointed coz till now it is the worst returning experience I've received from literally any app!",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Apparel",
+    "inferred_cluster": "Fit & Sizing Anxiety",
+    "intent_friction": "Item ran small in size; replacement failed QC friction"
+  },
+  {
+    "review_id": "2651368d-e7b8-434a-8849-ca6431c5388b",
+    "author": "Mahi Ji",
+    "rating": 5,
+    "text": "Bahut hi pyaari shirt hai! Iska green rang bilkul waisa hi hai jaisa photo mein dikh raha tha. Fabric kaafi soft aur comfortable hai. Fitting bhi perfect aayi. Highly recommended!\"",
+    "app_version": null,
+    "country": "in",
+    "category": "Tops & Shirts",
+    "inferred_cluster": "Fit & Color Validation",
+    "intent_friction": "Ideal conversion blueprint: color accuracy + soft fabric + perfect fitting"
+  },
+  {
+    "review_id": "03ffa5c7-4843-4534-8cf3-185224e57991",
+    "author": "Priyam Rathore",
+    "rating": 5,
+    "text": "Hands down the best shopping interface. The 'Liquid Glass' update is super smooth, and the personalized suggestions are actually helpu l.",
+    "app_version": "4.2607.32",
+    "country": "in",
+    "category": "App UI / Discovery",
+    "inferred_cluster": "UI & Discovery Satisfaction",
+    "intent_friction": "Personalized discovery & smooth UX increases dwell time"
+  },
+  {
+    "review_id": "647ea21c-937a-4054-936e-c38d6487f61e",
+    "author": "Dp Lamok",
+    "rating": 1,
+    "text": "very disappointed with the service of myntra receiving completely different product n different size not once but multiple times, even my friend also facing same issues, being the oldest customer i never faced such issues before.",
+    "app_version": null,
+    "country": "in",
+    "category": "Apparel",
+    "inferred_cluster": "Fit & Sizing Anxiety",
+    "intent_friction": "Size mismatch & erratic sizing creates hesitation on saved items"
+  },
+  {
+    "review_id": "37e0b096-c264-4995-95ce-286a6495e381",
+    "author": "Debashis Hota",
+    "rating": 1,
+    "text": "I’m disappointed with Myntra’s return order policy. I was charged ₹23 as a platform fee, and I don’t think this fee should be deducted when I’m returning an order. I would like Myntra to refund the ₹23 platform fee as well. Please review this policy and provide a fair resolution to customers.",
+    "app_version": "4.2604.10",
+    "country": "in",
+    "category": "Return Friction",
+    "inferred_cluster": "Return Policy & Logistics Dread",
+    "intent_friction": "Platform fee on returns increases risk perception of wishlisting"
+  },
+  {
+    "review_id": "8f971bb4-5818-4d8d-a378-95b377b186f3",
+    "author": "Sakshi Gupta",
+    "rating": 3,
+    "text": "evrything is ok...but ye system glt h platform fee itna jyada lete h ki agr br br return kro koi chiz psnd na aane pr to apka adha paisa to ussi mei nikal jayega",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Return Friction",
+    "inferred_cluster": "Return Policy & Logistics Dread",
+    "intent_friction": "Fear of multiple return fees leads to hoarding in wishlist instead of ordering"
+  },
+  {
+    "review_id": "1a92f3fa-708e-478d-8164-dfaf22365dc2",
+    "author": "Pankaj Kumar",
+    "rating": 5,
+    "text": "Bought Fbella satin night dress via myntra. Its quality is like amazing. Fully satisfied with the quality I ordered and it's worth to buy.",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Dresses & Gowns",
+    "inferred_cluster": "Fabric & Sensory Ambiguity",
+    "intent_friction": "Satin fabric quality verified — satisfies sensory hesitation"
+  },
+  {
+    "review_id": "0ee6474b-6144-44cd-b1e2-ea53206d0343",
+    "author": "Rajveer Demon",
+    "rating": 4,
+    "text": "nice pants and fashion accessories",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Denim & Trousers",
+    "inferred_cluster": "Styling & Wardrobe Coordination",
+    "intent_friction": "Pants + accessory pairing combo interest"
+  },
+  {
+    "review_id": "606f5d62-b251-44ff-8e03-637143df4130",
+    "author": "Sneha Tomar",
+    "rating": 5,
+    "text": "amazing place to find your outfit and aesthetic home decor 🙌🏻🤌🏻✨",
+    "app_version": "4.2607.43",
+    "country": "in",
+    "category": "Aesthetic Outfit",
+    "inferred_cluster": "Styling & Wardrobe Coordination",
+    "intent_friction": "Aesthetic curation & outfit search behavior"
+  }
+]

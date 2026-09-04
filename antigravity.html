@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Customer Review Analyzer Agent | Anti-Gravity Experience</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Matter.js Physics Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Glow animations */
+    .glow-pill-btn {
+      position: relative;
+      box-shadow: 0 0 20px -3px rgba(236, 72, 153, 0.4);
+      transition: all 0.2s ease;
+    }
+    .glow-pill-btn:hover {
+      box-shadow: 0 0 25px 2px rgba(236, 72, 153, 0.6);
+      transform: translateY(-1px);
+    }
+    /* Physics floating element styling */
+    .physics-body {
+      position: absolute !important;
+      margin: 0 !important;
+      user-select: none;
+      pointer-events: auto;
+      will-change: transform;
+      cursor: grab;
+    }
+    .physics-body:active {
+      cursor: grabbing;
+    }
+    /* Gravity indicator pulse */
+    @keyframes floatBob {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .floating-anim {
+      animation: floatBob 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#fafafa] text-slate-900 min-h-screen relative flex flex-col justify-between selection:bg-pink-100 selection:text-pink-600">
+
+  <!-- Main Document Flow Wrapper -->
+  <div id="page-content" class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-12">
+    
+    <!-- 1. Header Navigation -->
+    <header class="flex items-center justify-between py-2 border-b border-slate-200/80 bg-white/70 backdrop-blur-md rounded-2xl px-6 shadow-sm">
+      <!-- Left: Placeholder Logo -->
+      <div class="flex items-center gap-2.5 gravity-item">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-slate-950 via-slate-800 to-indigo-900 flex items-center justify-center text-white font-bold text-base shadow-sm">
+          A
+        </div>
+        <span class="font-extrabold text-base tracking-tight text-slate-950">AURA<span class="text-pink-500">.ai</span></span>
+      </div>
+
+      <!-- Center: Minimalist Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#create" class="hover:text-slate-950 transition gravity-item">Create</a>
+        <a href="#connect" class="hover:text-slate-950 transition gravity-item">Connect</a>
+        <a href="#clone" class="hover:text-slate-950 transition gravity-item">Clone</a>
+      </nav>
+
+      <!-- Right: Action Links & Pill Button -->
+      <div class="flex items-center gap-4 text-sm font-medium">
+        <a href="#pricing" class="hidden sm:inline-block text-slate-600 hover:text-slate-950 transition gravity-item">Pricing</a>
+        <a href="#login" class="text-slate-700 hover:text-slate-950 transition gravity-item">Login</a>
+        <button class="bg-slate-950 hover:bg-slate-800 text-white text-xs font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow transition gravity-item">
+          Sign up for free
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="text-center space-y-4 pt-6 sm:pt-10 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200/80 text-pink-700 text-xs font-semibold tracking-wide gravity-item shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+        Next-Gen Qualitative Intelligence
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-950 tracking-tight leading-[1.08] gravity-item">
+        AI Customer Review <br class="hidden sm:block">
+        <span class="bg-gradient-to-r from-slate-950 via-indigo-950 to-pink-600 bg-clip-text text-transparent">Analyzer Agent</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed gravity-item">
+        Elevate your business intelligence instantly with the power of automation at your fingertips!
+      </p>
+    </section>
+
+    <!-- 3. Interactive Centerpiece Input Box -->
+    <section class="max-w-3xl mx-auto w-full px-2">
+      <div class="bg-white border-2 border-slate-200/90 rounded-full p-2 sm:p-2.5 flex items-center justify-between shadow-xl shadow-slate-200/50 hover:border-slate-300 transition gravity-item">
+        <div class="flex items-center gap-3 pl-4 w-full">
+          <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          <input 
+            type="text" 
+            placeholder="Build a AI Customer Review Analyzer Agent..." 
+            class="w-full bg-transparent text-sm sm:text-base text-slate-900 placeholder:text-slate-400 focus:outline-none"
+          />
+        </div>
+        <button class="glow-pill-btn bg-slate-950 hover:bg-slate-850 text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-full shrink-0 flex items-center gap-1.5 border border-pink-500/30">
+          ✨ Start with AI →
+        </button>
+      </div>
+    </section>
+
+    <!-- 4. Feature Pills Row -->
+    <section class="flex flex-wrap items-center justify-center gap-2.5 max-w-2xl mx-auto">
+      <div class="px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm gravity-item">
+        ✨ Persistent memory
+      </div>
+      <div class="px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm gravity-item">
+        🤖 Web, code & data tools
+      </div>
+      <div class="px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm gravity-item">
+        ✅ 24/7 execution
+      </div>
+      <div class="px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm gravity-item">
+        🔒 Zero Monetary Bias
+      </div>
+    </section>
+
+    <!-- 5. Bottom Dashboard Card -->
+    <section class="max-w-4xl mx-auto w-full pt-4">
+      <div class="bg-gradient-to-b from-pink-50/70 via-rose-50/40 to-white border border-pink-100/90 rounded-3xl p-6 sm:p-8 shadow-lg shadow-pink-500/5 space-y-6 gravity-item">
+        <!-- Technical Micro-Text Header -->
+        <div class="flex items-center justify-between border-b border-pink-200/50 pb-3 font-mono text-[10px] sm:text-xs text-pink-700/80 uppercase tracking-widest font-semibold">
+          <span>STATUS · LIVE · UNIT · MEMORY · V1</span>
+          <span class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            NLP ENGINE ACTIVE
+          </span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="space-y-1">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+              AI Customer Review Analyzer Agent
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Autonomous topic modeling, fit-anxiety clustering, and non-monetary conversion drivers.
+            </p>
+          </div>
+          <button class="glow-pill-btn bg-gradient-to-r from-pink-500 via-rose-500 to-indigo-600 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md shrink-0">
+            Start with AI
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Trigger Bar -->
+    <footer class="text-center py-6 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        Built with high-fidelity qualitative grounding • Zero promotional incentives
+      </div>
+      <!-- Anti-Gravity Trigger Button -->
+      <button id="anti-gravity-btn" class="px-4 py-2 rounded-full bg-slate-900 text-white font-semibold text-xs hover:bg-pink-600 transition shadow-md flex items-center gap-1.5">
+        🚀 <span id="gravity-btn-text">Turn off gravity</span>
+      </button>
+    </footer>
+
+  </div>
+
+  <!-- Anti-Gravity Physics Script using Matter.js -->
+  <script>
+    let isAntiGravityActive = false;
+    let engine, render, runner;
+
+    const gravityBtn = document.getElementById('anti-gravity-btn');
+    const gravityText = document.getElementById('gravity-btn-text');
+
+    gravityBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleAntiGravity();
+    });
+
+    // Also trigger on background click if clicked outside interactive elements
+    document.body.addEventListener('dblclick', () => {
+      if (!isAntiGravityActive) toggleAntiGravity();
+    });
+
+    function toggleAntiGravity() {
+      if (isAntiGravityActive) return;
+      isAntiGravityActive = true;
+      gravityText.textContent = "Anti-Gravity Active! Drag & Throw!";
+      gravityBtn.classList.add('bg-pink-600', 'animate-pulse');
+
+      // 1. Initialize Matter.js Engine & Inverted Gravity (Pull Upwards)
+      const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint } = Matter;
+
+      engine = Engine.create();
+      // Set inverted gravity pulling UPWARDS (negative Y axis)
+      engine.world.gravity.y = -0.8;
+      engine.world.gravity.x = 0;
+
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      // 2. Create Rigid Boundary Walls (Ceiling, Floor, Left, Right)
+      const wallThickness = 100;
+      const ceiling = Bodies.rectangle(viewportWidth / 2, -wallThickness / 2, viewportWidth * 2, wallThickness, { isStatic: true });
+      const floor = Bodies.rectangle(viewportWidth / 2, viewportHeight + wallThickness / 2, viewportWidth * 2, wallThickness, { isStatic: true });
+      const leftWall = Bodies.rectangle(-wallThickness / 2, viewportHeight / 2, wallThickness, viewportHeight * 2, { isStatic: true });
+      const rightWall = Bodies.rectangle(viewportWidth + wallThickness / 2, viewportHeight / 2, wallThickness, viewportHeight * 2, { isStatic: true });
+
+      Composite.add(engine.world, [ceiling, floor, leftWall, rightWall]);
+
+      // 3. Collect all DOM elements marked as gravity-item
+      const elements = document.querySelectorAll('.gravity-item, header, section, button, input');
+      const physicsElements = [];
+
+      elements.forEach((el) => {
+        // Skip hidden or tiny elements
+        const rect = el.getBoundingClientRect();
+        if (rect.width < 10 || rect.height < 10) return;
+
+        // Calculate absolute position on screen
+        const startX = rect.left + rect.width / 2;
+        const startY = rect.top + rect.height / 2;
+
+        // Create Matter rigid body
+        const body = Bodies.rectangle(startX, startY, rect.width, rect.height, {
+          restitution: 0.75, // Bouncy collision
+          friction: 0.1,
+          frictionAir: 0.02,
+          density: 0.001
+        });
+
+        // Add slight random initial rotation / angular impulse
+        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.05);
+
+        // Store reference
+        physicsElements.push({
+          domElement: el,
+          body: body,
+          width: rect.width,
+          height: rect.height,
+          initialLeft: rect.left,
+          initialTop: rect.top
+        });
+
+        Composite.add(engine.world, body);
+      });
+
+      // 4. Detach DOM elements and apply absolute physical coordinates
+      physicsElements.forEach(item => {
+        const el = item.domElement;
+        el.style.width = item.width + 'px';
+        el.style.height = item.height + 'px';
+        el.style.left = item.initialLeft + 'px';
+        el.style.top = item.initialTop + 'px';
+        el.classList.add('physics-body');
+        document.body.appendChild(el);
+      });
+
+      // Hide the static content wrapper
+      const pageWrapper = document.getElementById('page-content');
+      if (pageWrapper) pageWrapper.style.pointerEvents = 'none';
+
+      // 5. Mouse Constraint for Clicking, Dragging & Throwing
+      const mouse = Mouse.create(document.body);
+      const mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+          stiffness: 0.2,
+          render: { visible: false }
+        }
+      });
+      Composite.add(engine.world, mouseConstraint);
+
+      // 6. Animation Render Loop: Synchronize DOM Transforms with Matter.js Bodies
+      function updatePhysicsDOM() {
+        Engine.update(engine, 1000 / 60);
+
+        physicsElements.forEach(item => {
+          const { body, domElement, width, height } = item;
+          const x = body.position.x - width / 2;
+          const y = body.position.y - height / 2;
+          const angle = body.angle;
+
+          domElement.style.transform = `translate(${x - item.initialLeft}px, ${y - item.initialTop}px) rotate(${angle}rad)`;
+        });
+
+        requestAnimationFrame(updatePhysicsDOM);
+      }
+
+      requestAnimationFrame(updatePhysicsDOM);
+    }
+  </script>
+</body>
+</html>
